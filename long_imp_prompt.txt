@@ -1,0 +1,126 @@
+make a csv for given fields 
+Data Fields 
+Field Name Description (if inferred) 
+ref_id - alphanumeric 
+Reference ID for the transaction 
+
+txn_type (PAYMENT/FETCH)
+Transaction type 
+
+ msg_id (alphanumeric)
+ Message identifier
+
+ mti (PAYMENT/ FETCH) 
+Message Type Indicator 
+
+blr_category (Electricity/Credit Card/ Fastag/DTH/LPG Gas/Landline Postpaid/Mobile Postpaid/Loan Repayment/ Municipal Taxes) 
+Biller category
+
+ response_code (000 or 200 for success any other integer for failure)
+Response status code 
+
+payment_channel (Mobile_Banking/Mobile/Internet/Agent)
+Channel used for the payment 
+
+cou_mnthly_count (from 1 to 5)
+Monthly count for COU 
+
+cou_request_ts 
+COU request timestamp 
+
+cou_id - alphanumeric(eg. BD01)
+Customer Operator Unit ID 
+
+bou_request_ts 
+BOU request timestamp 
+
+bou_id - alphanumeric
+BOU identifier 
+
+bou_repsonse_ts
+ BOU response timestamp 
+
+bou_status (RESPONSE_SUCCES/RESPONSE_FAILURE)
+BOU status 
+
+cou_response_ts
+ COU response timestamp 
+
+cou_status (SENT/NOT_SENT)
+COU status
+
+ cust_mobile_num - 10 digit integer
+Customer mobile number 
+
+tran_ref_id - alphanumeric
+ Transaction reference ID 
+
+blr_id alphanumeric
+ Biller ID 
+
+agent_id - alphanumeric
+Agent ID 
+
+last_upd_port - 9093
+ Last updated port
+
+crtn_ts 
+Creation timestamp 
+
+lst_upd_ts Last updated timestamp 
+
+ settlment_cycle_id - 13 digit integer
+Settlement cycle identifier 
+
+compliance_cd - four space alphanumeric code only applicable in case of failure
+Compliance code
+
+ compliance_reason 
+Reason for compliance failure 
+
+off_us_pay (FALSE/TRUE) 
+Flag for off-us payments 
+
+txn_date 
+Transaction date (in YYYYMMDD format) 
+
+txn_currency - 356
+Currency of the transaction
+
+ txn_amount - integer
+Transaction amount 
+
+blr_fee - float (always approx. 0.3 - 0.5% of transaction amount)
+Fee earned by the biller 
+
+clearing_ts
+Timestamp of clearing 
+
+txn_channel - Mobile/Mobile_Banking/Internet/Agent
+ Channel used 
+
+txn_payment_mode -UPI/Credit Card/Internet_Banking/Prepaid_Card/Cash/Wallet
+Payment mode
+
+bou_count_month - integer from 1 to 5
+ Monthly BOU count 
+
+cou_count_month - integer from 1 to 5
+Monthly COU count 
+
+blr_type -(Electricity/Credit Card/ Fastag/DTH/LPG Gas/Landline Postpaid/Mobile Postpaid/Loan Repayment/ Municipal Taxes) 
+Type/category of biller 
+
+asdt - dd-mm-yyyy
+Actual settlement date 
+
+cou_name 
+name of cou 
+
+bou_name
+ name of bou 
+
+blr_name 
+name of the biller
+
+each id is unique a cou and bou can have multiple transactions so their bou_id and cou_id can be same for various transactions but always remember that a cou and a bou will have unique id, follow the datatypes or options to fill the column, make sure the data is clean with no null values, give upto i lakh records, make sure to align it date wise, also each timestam has a difference of milliseconds, the entire transaction completes in 3 seconds means 300 milliseconds
